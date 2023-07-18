@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+
+import { MobileNav } from "./mobile-nav";
+import { buttonVariants } from "./ui/button";
+
+import logoValentaxi from "../assets/images/valentaxi-100x100.webp";
+---
+
+<nav
+  class="w-full container mx-auto flex justify-between items-center py-5"
+  id="inicio"
+>
+  <a href="#inicio" class="flex gap-3 items-center">
+    <Image
+      src={logoValentaxi}
+      class="w-12 h-12 md:w-full md:h-full"
+      alt="Logo de Valentaxi"
+    />
+    <h3 class="text-xl xl:text-3xl font-black">Valentaxi</h3>
+
+    <span class="sr-only">Ir al inicio</span>
+  </a>
+
+  <ul class="hidden xl:flex xl:items-center xl:justify-evenly xl:gap-5">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+    <li>
+      <a
+        href="https://api.whatsapp.com/send/?phone=584124791885&text&type=phone_number&app_absent=0"
+        target="_blank"
+        rel="norel"
+        referrerpolicy="no-referrer"
+        class={buttonVariants({ variant: "brand" })}>Contactanos</a
+      >
+    </li>
+  </ul>
+
+  <MobileNav client:media="(max-width: 1280px)" />
+</nav>

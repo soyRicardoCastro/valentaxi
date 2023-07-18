@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+
+const features = [
+  {
+    title: "Conductor profesional y capacitado",
+    description:
+      "Los conductores de Valentaxi son profesionales y están capacitados para brindar un servicio de alta calidad. Son amables, respetuosos y conocedores de las rutas y destinos en Venezuela.",
+    icon: "car.svg",
+  },
+  {
+    title: "Comodidad y confort",
+    description:
+      "Valentaxi se enfoca en brindar un viaje cómodo y confortable a sus clientes. Sus vehículos están bien mantenidos y equipados con comodidades como aire acondicionado y asientos espaciosos.",
+    icon: "heart.svg",
+  },
+  {
+    title: "Puntualidad",
+    description:
+      "La puntualidad es una prioridad para Valentaxi. Los conductores llegan a tiempo para recoger a los clientes y se esfuerzan por cumplir con los horarios acordados.",
+    icon: "calendar-clock.svg",
+  },
+  {
+    title: "Seguridad",
+    description:
+      "Valentaxi se preocupa por la seguridad de sus clientes. Los conductores siguen todas las normas de tránsito y garantizan un viaje seguro. Además, los vehículos de Valentaxi están equipados con sistemas de seguridad adicionales.",
+    icon: "heart-handshake.svg",
+  },
+  {
+    title: "Reserva en línea y por teléfono",
+    description:
+      "Valentaxi ofrece la conveniencia de reservar un viaje en línea a través de su sitio web o por teléfono. Esto facilita a los clientes planificar y asegurar su transporte con anticipación.",
+    icon: "phone.svg",
+  },
+  {
+    title: "Calidad del servicio:",
+    description:
+      "Valentaxi se esfuerza por brindar un servicio de alta calidad en cada viaje. Su objetivo es superar las expectativas de los clientes y garantizar una experiencia satisfactoria.",
+    icon: "star.svg",
+  },
+];
+---
+
+<!-- ====== Services Section Start -->
+<section
+  class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] container mx-auto mb-28"
+  id="sobre-nosotros"
+>
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+          <h2 class="mb-4 text-3xl font-bold xl:text-4xl">Sobre Nosotros</h2>
+          <p class="text-base">
+            Estas son algunos de los beneficios y caracteristicas que tienes con
+            nosotros
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center"
+    >
+      {
+        features.map((feature) => (
+          <div class="w-full px-2">
+            <div class="rounded-3xl bg-slate-800/80 p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10 grid gap-4">
+              <div class="border-4 flex h-16 w-16 items-center justify-center rounded-2xl">
+                <Image
+                  src={`/svg/${feature.icon}`}
+                  width="28"
+                  height="28"
+                  class="w-7 h-7"
+                  alt={`Icono de ${feature.title}`}
+                />
+              </div>
+              <span class="text-slate-100 text-xl font-semibold">
+                {feature.title}
+              </span>
+              <p class="text-slate-300">{feature.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ====== Services Section End -->
