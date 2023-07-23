@@ -28,7 +28,7 @@
                 Nuestra ubicacion
               </h4>
               <p class="text-slate-200 text-base">
-                99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                Quinta La Alborada,, Av. 106, Valencia 2001, Carabobo
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@
               <h4 class="text-dark mb-1 text-xl font-bold">
                 Numero de Telefono
               </h4>
-              <p class="text-slate-200 text-base">(+62)81 414 257 9980</p>
+              <p class="text-slate-200 text-base">+584124791885</p>
             </div>
           </div>
           <div class="mb-8 flex w-full max-w-[370px]">
@@ -70,7 +70,9 @@
               <h4 class="text-dark mb-1 text-xl font-bold">
                 Correo Electronico
               </h4>
-              <p class="text-slate-200 text-base">info@yourdomain.com</p>
+              <p class="text-slate-200 text-base">
+                jeancarlosvalera9@gmail.com
+              </p>
             </div>
           </div>
         </div>
@@ -714,12 +716,11 @@
 
     $sendEmail.setAttribute(
       "href",
-      `mailto:mail@mail.com?subject=${
+      `mailto:jeancarlosvalera9@gmail.com?subject=${
         "Correo de " + name
       }?body=Correo enviado desde ${email}, mensaje: ${message}`
     );
-    // $sendEmail.click();
-    console.log({ a: $sendEmail });
+    $sendEmail.click();
 
     return;
   }
